@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
       featured: true,
     },
     {
-      id: ,
+      id:3 ,
       title: 'AI Chatbot',
       description: 'An intelligent chatbot powered by machine learning with natural language processing and context awareness.',
       image: '/api/placeholder/400/300',
