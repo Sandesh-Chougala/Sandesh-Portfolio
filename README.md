@@ -1,46 +1,142 @@
-# Getting Started with Create React App
+# Modern Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🎨 **Modern Design**: Clean, professional design with smooth animations
+- 📱 **Fully Responsive**: Optimized for mobile, tablet, and desktop
+- 🌙 **Dark/Light Mode**: Toggle between dark and light themes
+- ⚡ **Smooth Animations**: Framer Motion animations throughout
+- 🎯 **Smooth Scrolling**: Seamless navigation between sections
+- 📋 **Contact Form**: Functional contact form with validation
+- 🎨 **Diagonal Dividers**: Beautiful diagonal transitions between sections
 
-### `npm start`
+## Sections
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Header**: Sticky navigation with mobile menu and theme toggle
+- **Hero**: Full-screen introduction with call-to-action
+- **About**: Personal information with skills and stats
+- **Projects**: Showcase of featured projects with hover effects
+- **Contact**: Contact form and information
+- **Footer**: Social links and additional information
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- **React 18** with TypeScript
+- **Framer Motion** for animations
+- **Lucide React** for icons
+- **React Icons** for additional icons
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or higher)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio
+```
 
-### `npm run eject`
+2. Install dependencies:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Start the development server:
+```bash
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Customization
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Personal Information
 
-## Learn More
+Update the following files with your personal information:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `src/components/Hero.tsx` - Name, title, and bio
+- `src/components/About.tsx` - About section content and skills
+- `src/components/Projects.tsx` - Your projects
+- `src/components/Contact.tsx` - Contact information
+- `src/components/Footer.tsx` - Footer content and social links
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Styling
+
+The project uses Tailwind CSS for styling. You can customize:
+
+- Colors in `tailwind.config.js`
+- Custom styles in `src/index.css`
+- Component-specific styles in individual component files
+
+### Theme Customization
+
+The dark/light mode toggle is implemented using Tailwind's dark mode feature. You can customize the color scheme by modifying the dark mode classes throughout the components.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.tsx          # Navigation header
+│   ├── Hero.tsx           # Hero section
+│   ├── About.tsx          # About section
+│   ├── Projects.tsx       # Projects showcase
+│   ├── Contact.tsx        # Contact form
+│   ├── Footer.tsx         # Footer
+│   └── DiagonalDivider.tsx # Diagonal section dividers
+├── App.tsx                # Main app component
+├── index.css              # Global styles
+└── index.tsx              # App entry point
+```
+
+## Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+This creates a `build` folder with optimized production files.
+
+### Deploy to Netlify
+
+1. Build the project: `npm run build`
+2. Drag and drop the `build` folder to Netlify
+3. Configure custom domain (optional)
+
+### Deploy to Vercel
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project directory
+3. Follow the prompts
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
+3. Commit changes: `git commit -m 'Add feature'`
+4. Push to branch: `git push origin feature-name`
+5. Submit a pull request
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Support
+
+If you have any questions or need help customizing the portfolio, please open an issue on GitHub.
