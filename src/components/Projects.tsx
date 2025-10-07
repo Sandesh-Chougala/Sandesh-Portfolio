@@ -60,6 +60,17 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/Sandesh-Chougala/GX-Game",
       featured: true,
     },
+    {
+      id: 5,
+      title: "YT Downloader",
+      description:
+        "A web application that allows users to download YouTube videos and audios in various formats.",
+      image: "/api/placeholder/400/300",
+      technologies: ["HTML", "JavaScript", "CSS", "Python", "Flask"],
+      liveUrl: "https://github.com/Sandesh-Chougala/Youtube-downloader",
+      githubUrl: "https://github.com/Sandesh-Chougala/Youtube-downloader",
+      featured: true,
+    },
   ];
 
   const containerVariants = {
