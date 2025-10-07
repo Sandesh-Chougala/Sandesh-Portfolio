@@ -1,51 +1,68 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import './Contact.css';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import "./Contact.css";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xldpwezp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setIsSubmitted(false), 3000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error sending message. Please try again later.");
+    }
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'sandeshchougala205@gmail.com',
-      href: 'mailto:sandeshchougala205@gmail.com',
+      label: "Email",
+      value: "sandeshchougala205@gmail.com",
+      href: "mailto:sandeshchougala205@gmail.com",
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '+91 6360428201',
-      href: 'tel:+916360428201',
+      label: "Phone",
+      value: "+91 6360428201",
+      href: "tel:+916360428201",
     },
     {
       icon: MapPin,
-      label: 'Location',
-      value: 'Belagavi, India',
-      href: 'https://maps.google.com/?q=Belagavi+India',
+      label: "Location",
+      value: "Belagavi, India",
+      href: "https://maps.google.com/?q=Belagavi+India",
     },
   ];
 
@@ -84,8 +101,9 @@ const Contact: React.FC = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="contact-description">
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's discuss how we can work together to bring your ideas to life.
+            Have a project in mind or want to collaborate? I'd love to hear from
+            you. Let's discuss how we can work together to bring your ideas to
+            life.
           </p>
         </motion.div>
 
@@ -99,12 +117,11 @@ const Contact: React.FC = () => {
           {/* Contact Information */}
           <motion.div variants={itemVariants} className="contact-info">
             <div>
-              <h3 className="contact-section-title">
-                Let's Connect
-              </h3>
+              <h3 className="contact-section-title">Let's Connect</h3>
               <p className="contact-description-text">
-                I'm always interested in new opportunities and exciting projects. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                I'm always interested in new opportunities and exciting
+                projects. Whether you have a question or just want to say hi,
+                I'll try my best to get back to you!
               </p>
             </div>
 
@@ -130,9 +147,7 @@ const Contact: React.FC = () => {
 
             {/* Social Links */}
             <div className="social-links">
-              <h4 className="social-title">
-                Follow Me
-              </h4>
+              <h4 className="social-title">Follow Me</h4>
               <div className="social-grid">
                 <a
                   href="https://github.com/Sandesh-Chougala/"
@@ -175,10 +190,11 @@ const Contact: React.FC = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div variants={itemVariants} className="contact-form-container">
-            <h3 className="form-title">
-              Send a Message
-            </h3>
+          <motion.div
+            variants={itemVariants}
+            className="contact-form-container"
+          >
+            <h3 className="form-title">Send a Message</h3>
 
             {isSubmitted ? (
               <motion.div
@@ -187,9 +203,7 @@ const Contact: React.FC = () => {
                 className="success-message"
               >
                 <CheckCircle className="success-icon" />
-                <h4 className="success-title">
-                  Message Sent!
-                </h4>
+                <h4 className="success-title">Message Sent!</h4>
                 <p className="success-text">
                   Thank you for your message. I'll get back to you soon.
                 </p>
@@ -244,10 +258,7 @@ const Contact: React.FC = () => {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="form-submit"
-                >
+                <button type="submit" className="form-submit">
                   <Send className="form-submit-icon" />
                   <span>Send Message</span>
                 </button>

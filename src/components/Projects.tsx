@@ -17,7 +17,7 @@ interface Project {
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
-      id: 2,
+      id: 1,
       title: "Personal Portfolio",
       description:
         "Designed and developed a personal portfolio website to showcase projects, skills, and achievements in an interactive way",
@@ -28,7 +28,7 @@ const Projects: React.FC = () => {
       featured: true,
     },
     {
-      id: 1,
+      id: 2,
       title: "GPTM Frontend",
       description:
         "This is a frontend of GPTM. It have all the Collage Details | Courses | Faculty | Events | Gallery | Contact | Placement /history etc..",
