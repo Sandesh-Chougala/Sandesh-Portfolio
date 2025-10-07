@@ -42,11 +42,22 @@ const Projects: React.FC = () => {
       id: 3,
       title: "AI Chatbot",
       description:
-        "An intelligent chatbot powered by machine learning with natural language processing and context awareness.",
+        "An intelligent chatbot powered by Gemini API with natural language processing and context awareness.",
       image: "/api/placeholder/400/300",
       technologies: ["Python", "React", "Flask", "MongoDB"],
       liveUrl: "alert('Coming Soon')",
       githubUrl: "https://github.com/Sandesh-Chougala/AI-Chatbot",
+      featured: true,
+    },
+    {
+      id: 4,
+      title: "GX Game",
+      description:
+        "An exciting game built with HTML and JavaScript that saves data in Firebase.",
+      image: "/api/placeholder/400/300",
+      technologies: ["HTML", "JavaScript", "CSS", "Firebase"],
+      liveUrl: "https://gx-game-sandy.netlify.app/menu.html",
+      githubUrl: "https://github.com/Sandesh-Chougala/GX-Game",
       featured: true,
     },
   ];
@@ -169,17 +180,6 @@ const Projects: React.FC = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* View More Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="view-more-button"
-        >
-          <button className="view-more-btn">View All Projects</button>
         </motion.div>
       </div>
     </section>
