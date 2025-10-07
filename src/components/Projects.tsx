@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-import './Projects.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import "./Projects.css";
 
 interface Project {
   id: number;
@@ -17,34 +17,37 @@ interface Project {
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
-      image: '/api/placeholder/400/300',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      liveUrl: '#',
-      githubUrl: '#',
-      featured: true,
-    },
-    {
       id: 2,
-      title: 'Personal Portfolio',
-      description: 'Designed and developed a personal portfolio website to showcase projects, skills, and achievements in an interactive way',
-      image: '/api/placeholder/400/300',
-      technologies: ['React', 'Node.js', 'CSS'],
-      liveUrl: 'https://sandesh-chougala-portfolio.netlify.app/',
-      githubUrl: 'https://github.com/Sandesh-Chougala/Sandesh-Portfolio',
+      title: "Personal Portfolio",
+      description:
+        "Designed and developed a personal portfolio website to showcase projects, skills, and achievements in an interactive way",
+      image: "/api/placeholder/400/300",
+      technologies: ["React", "Node.js", "CSS"],
+      liveUrl: "https://sandesh-chougala-portfolio.netlify.app/",
+      githubUrl: "https://github.com/Sandesh-Chougala/Sandesh-Portfolio",
       featured: true,
     },
     {
-      id:3 ,
-      title: 'AI Chatbot',
-      description: 'An intelligent chatbot powered by machine learning with natural language processing and context awareness.',
-      image: '/api/placeholder/400/300',
-      technologies: ['Python', 'TensorFlow', 'Flask', 'NLTK'],
-      liveUrl: '#',
-      githubUrl: '#',
+      id: 1,
+      title: "GPTM Frontend",
+      description:
+        "This is a frontend of GPTM. It have all the Collage Details | Courses | Faculty | Events | Gallery | Contact | Placement /history etc..",
+      image: "/api/placeholder/400/300",
+      technologies: ["HTML", "JavaScript", "CSS"],
+      liveUrl: "https://sandy2007gptm.netlify.app/",
+      githubUrl: "https://github.com/Sandesh-Chougala/GPTM-COLLAGE-FRONTEND",
       featured: false,
+    },
+    {
+      id: 3,
+      title: "AI Chatbot",
+      description:
+        "An intelligent chatbot powered by machine learning with natural language processing and context awareness.",
+      image: "/api/placeholder/400/300",
+      technologies: ["Python", "React", "Flask", "MongoDB"],
+      liveUrl: "alert('Coming Soon')",
+      githubUrl: "https://github.com/Sandesh-Chougala/AI-Chatbot",
+      featured: true,
     },
   ];
 
@@ -83,7 +86,8 @@ const Projects: React.FC = () => {
             My <span className="gradient-text">Projects</span>
           </h2>
           <p className="projects-description">
-            Here are some of my recent projects that showcase my skills and experience in web development.
+            Here are some of my recent projects that showcase my skills and
+            experience in web development.
           </p>
         </motion.div>
 
@@ -98,17 +102,15 @@ const Projects: React.FC = () => {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className={`project-card ${project.featured ? 'featured' : ''}`}
+              className={`project-card ${project.featured ? "featured" : ""}`}
             >
               {/* Project Image */}
               <div className="project-image">
                 {project.title.charAt(0)}
-                
+
                 {/* Featured Badge */}
                 {project.featured && (
-                  <div className="featured-badge">
-                    Featured
-                  </div>
+                  <div className="featured-badge">Featured</div>
                 )}
 
                 {/* Hover Overlay */}
@@ -134,21 +136,14 @@ const Projects: React.FC = () => {
 
               {/* Project Content */}
               <div className="project-content">
-                <h3 className="project-title">
-                  {project.title}
-                </h3>
-                
-                <p className="project-description">
-                  {project.description}
-                </p>
+                <h3 className="project-title">{project.title}</h3>
+
+                <p className="project-description">{project.description}</p>
 
                 {/* Technologies */}
                 <div className="project-technologies">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="technology-tag"
-                    >
+                    <span key={tech} className="technology-tag">
                       {tech}
                     </span>
                   ))}
@@ -184,9 +179,7 @@ const Projects: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="view-more-button"
         >
-          <button className="view-more-btn">
-            View All Projects
-          </button>
+          <button className="view-more-btn">View All Projects</button>
         </motion.div>
       </div>
     </section>
