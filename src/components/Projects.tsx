@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
       title: "GPTM Frontend",
       description:
         "This is a frontend of GPTM. It have all the Collage Details | Courses | Faculty | Events | Gallery | Contact | Placement /history etc..",
-      image: "/api/placeholder/400/300",
+      image: "",
       technologies: ["HTML", "JavaScript", "CSS"],
       liveUrl: "https://sandy2007gptm.netlify.app/",
       githubUrl: "https://github.com/Sandesh-Chougala/GPTM-COLLAGE-FRONTEND",

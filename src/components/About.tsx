@@ -1,14 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Palette, Lightbulb, Users } from 'lucide-react';
-import './About.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code, Palette, Lightbulb, Users } from "lucide-react";
+import "./About.css";
 
 const About: React.FC = () => {
   const skills = [
-    { name: 'Frontend Development', icon: Code, color: 'blue' },
-    { name: 'UI/UX Design', icon: Palette, color: 'purple' },
-    { name: 'Problem Solving', icon: Lightbulb, color: 'yellow' },
-    { name: 'Team Collaboration', icon: Users, color: 'green' },
+    { name: "Frontend Development", icon: Code, color: "blue" },
+    { name: "UI/UX Design", icon: Palette, color: "purple" },
+    { name: "Problem Solving", icon: Lightbulb, color: "yellow" },
+    { name: "Team Collaboration", icon: Users, color: "green" },
   ];
 
   const containerVariants = {
@@ -47,17 +47,18 @@ const About: React.FC = () => {
             <h2 className="about-title">
               About <span className="gradient-text">Me</span>
             </h2>
-            
+
             <p className="about-text">
-              I'm a passionate full-stack developer with  creating 
-              digital solutions that make a difference. I specialize in modern web technologies 
-              and have a keen eye for design and user experience.
+              I'm a passionate full-stack developer with creating digital
+              solutions that make a difference. I specialize in modern web
+              technologies and have a keen eye for design and user experience.
             </p>
-            
+
             <p className="about-text">
-              When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or sharing knowledge with the developer community. I believe 
-              in continuous learning and staying up-to-date with the latest industry trends.
+              When I'm not coding, you can find me exploring new technologies,
+              contributing to open-source projects, or sharing knowledge with
+              the developer community. I believe in continuous learning and
+              staying up-to-date with the latest industry trends.
             </p>
 
             {/* Skills Grid */}
@@ -68,23 +69,21 @@ const About: React.FC = () => {
                   variants={itemVariants}
                   className="skill-item"
                 >
-                  <skill.icon className={`skill-icon skill-icon-${skill.color}`} />
-                  <span className="skill-name">
-                    {skill.name}
-                  </span>
+                  <skill.icon
+                    className={`skill-icon skill-icon-${skill.color}`}
+                  />
+                  <span className="skill-name">{skill.name}</span>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
-          {/* Profile Image and Stats */}
+          {/* Profile Image and Stats */}{" "}
           <motion.div variants={itemVariants} className="about-visual">
             {/* Profile Image */}
-            <div style={{ position: 'relative' }}>
+            <div style={{ position: "relative" }}>
               <div className="profile-image-large">
-                SC
+                <img src="/my.jpg" alt="Profile" className="profile-img" />
               </div>
-              
             </div>
 
             {/* Stats */}

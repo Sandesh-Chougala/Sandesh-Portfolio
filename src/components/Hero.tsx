@@ -1,19 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {  Download } from 'lucide-react';
-import './Hero.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
+import "./Hero.css";
 
 const Hero: React.FC = () => {
   const scrollToAbout = () => {
-    const element = document.getElementById('about');
+    const element = document.getElementById("about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <section id="home" className="hero">
-      {/* Background Pattern */}
       <div className="hero-background"></div>
 
       <div className="hero-content">
@@ -22,14 +21,13 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Profile Image Placeholder */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="profile-image"
           >
-            SC
+            <img className="profile-img" src="/my.jpg" alt="Profile" />
           </motion.div>
 
           {/* Name and Title */}
@@ -57,8 +55,9 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="hero-description"
           >
-            I create beautiful, functional, and user-centered digital experiences that bring ideas to life.
-            Passionate about clean code, innovative design, and continuous learning.
+            I create beautiful, functional, and user-centered digital
+            experiences that bring ideas to life. Passionate about clean code,
+            innovative design, and continuous learning.
           </motion.p>
 
           {/* Call to Action Buttons */}
@@ -68,13 +67,10 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="hero-buttons"
           >
-            <button
-              onClick={scrollToAbout}
-              className="hero-button-primary"
-            >
+            <button onClick={scrollToAbout} className="hero-button-primary">
               Learn More About Me
             </button>
-            
+
             <button className="hero-button-secondary">
               <Download className="w-5 h-5" />
               Download Resume

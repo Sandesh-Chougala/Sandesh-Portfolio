@@ -16,6 +16,12 @@
   margin: 0 auto;
 }
 
+.profile-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .about-grid {
   display: grid;
   gap: 4rem;
@@ -133,7 +139,7 @@
   width: 20rem;
   height: 20rem;
   margin: 0 auto;
-  border-radius: 1rem;
+  border-radius: 10rem;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   display: flex;
   align-items: center;
@@ -174,13 +180,22 @@
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .stats-grid {
