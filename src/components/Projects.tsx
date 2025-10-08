@@ -45,7 +45,7 @@ const Projects: React.FC = () => {
         "An intelligent chatbot powered by Gemini API with natural language processing and context awareness.",
       image: "/api/placeholder/400/300",
       technologies: ["Python", "React", "Flask", "MongoDB"],
-      liveUrl: "alert('Coming Soon')",
+      liveUrl: "https://sandy-ai.netlify.app/",
       githubUrl: "https://github.com/Sandesh-Chougala/AI-Chatbot",
       featured: true,
     },
