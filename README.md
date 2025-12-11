@@ -1,6 +1,6 @@
 # Modern Personal Portfolio Website
 
-Visit My Portfolio : https://sandy-portfolio20.netlify.app/
+Visit My Portfolio : https://sandesh-chougala.netlify.app/
 
 A modern, responsive personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
