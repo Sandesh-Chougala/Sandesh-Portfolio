@@ -16,6 +16,13 @@ const projects = [
     github: "https://github.com/Sandesh-Chougala/BMW-HUB",
     demo: "https://bmw-hub.netlify.app/",
   },
+   {
+    title: "Sandy GPT(AI Chatbot",
+    description: "BMW Hub it's E-Commerce site built with React and Css.it's also responsive Layout.",
+    tech: ["React", "CSS"],
+    github: "https://github.com/Sandesh-Chougala/BMW-HUB",
+    demo: "https://bmw-hub.netlify.app/",
+  },
 ];
 
 export default function Projects() {
