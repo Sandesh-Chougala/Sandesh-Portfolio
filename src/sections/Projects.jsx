@@ -9,6 +9,13 @@ const projects = [
     github: "https://github.com/Sandesh-Chougala/Sandesh-Portfolio",
     demo: "https://sandesh-chougala.netlify.app/",
   },
+  {
+    title: "BMW HUB(E-Commerce Site)",
+    description: "BMW Hub it's E-Commerce site built with React and Css.it's also responsive Layout.",
+    tech: ["React", "CSS"],
+    github: "https://github.com/Sandesh-Chougala/BMW-HUB",
+    demo: "https://bmw-hub.netlify.app/",
+  },
 ];
 
 export default function Projects() {
