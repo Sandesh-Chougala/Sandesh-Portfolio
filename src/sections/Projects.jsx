@@ -17,7 +17,7 @@ const projects = [
     demo: "https://bmw-hub.netlify.app/",
   },
    {
-    title: "Sandy GPT(AI Chatbot",
+    title: "Sandy GPT(AI Chatbot)",
     description: "This is AI Chat bot runnes on API key.",
     tech: ["React", "CSS", "Node.JS"],
     github: "https://github.com/Sandesh-Chougala/AI-Chatbot",
