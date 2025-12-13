@@ -18,10 +18,10 @@ const projects = [
   },
    {
     title: "Sandy GPT(AI Chatbot",
-    description: "BMW Hub it's E-Commerce site built with React and Css.it's also responsive Layout.",
-    tech: ["React", "CSS"],
-    github: "https://github.com/Sandesh-Chougala/BMW-HUB",
-    demo: "https://bmw-hub.netlify.app/",
+    description: "This is AI Chat bot runnes on API key.",
+    tech: ["React", "CSS", "Node.JS"],
+    github: "https://github.com/Sandesh-Chougala/AI-Chatbot",
+    demo: "https://github.com/Sandesh-Chougala/AI-Chatbot",
   },
 ];
 
